@@ -9,7 +9,6 @@ import (
 
 	"flag"
 	"fmt"
-	"github.com/tarm/goserial"
 	"log"
 )
 
@@ -18,18 +17,16 @@ var Input_write = flag.String("w", "020304F", "input writer id")
 var Input_file = flag.String("f", "filename", "input filename")
 var Input_scan = flag.String("s", "FFF", "input id for scan")
 
-
-
 var senddata []byte
-   var srwflag = 0  
+var srwflag = 0
 
 func main() {
 	flag.Parse()
-	
+
 	if packdata() == 1 {
 		fmt.Println("pls input parameters")
 		flag.Usage()
-		return 
+		return
 	}
 	c := &serial.Config{Name: "COM3", Baud: 38400}
 	s, err := serial.OpenPort(c)
