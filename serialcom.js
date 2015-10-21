@@ -26,7 +26,7 @@ app.get('/hello/*', function(req, res){
 //  });  
 //});  
 //上面的代码意思是，get请求根目录则调用views文件夹中的index模板，并且传入参数title为“Express”，这个title就可以在模板文件中直接使用。  
-  
+
   
 //现在可以绑定和监听端口了，调用app.listen()方法，接收同样的参数，比如：  
 app.listen(8080);    
