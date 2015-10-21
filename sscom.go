@@ -1,15 +1,15 @@
 package main
 
 import (
+	"encoding/hex"
+	"flag"
+	"fmt"
+	"io/ioutil"
+	"log"
 	"strconv"
 	"time"
 
-	"encoding/hex"
-	"io/ioutil"
-
-	"flag"
-	"fmt"
-	"log"
+	  "github.com/tarm/goserial"                             
 )
 
 var Input_read = flag.String("r", "020304F", "input reader id")
